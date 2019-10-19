@@ -3,9 +3,6 @@ class ObtenerPares:
 #SE IMPLEMENTA EL CODIGO QUE REALIZA LAS OPERACIONES BASICAS DE UNA PILA DINAMICA
     __listaPila = []
 
-    def __init__(self):
-        self.__listaPila = []
-
 #INSERTA UN ELEMENTO EN LA PILA
     def InsertarP(self, elemento):
         self.__listaPila.append(elemento)
@@ -65,3 +62,20 @@ class ObtenerPares:
 #IDENTIFICA EL TAMAÑO DE LA COLA
     def MostrarTamCola(self):
         return len(self._listaCola)
+
+#SE IMPLEMENTA LA PARTE DEL CODIGO DONDE SE ENCONTRARAN LOS PARES Y SE IRAN AGREGANDO
+
+#METODO QUE MUESTRA LOS ELEMENTOS AGREGADOS A LA LISTA PILA
+    def ElementosPila(self):
+        return self.__listaPila
+
+#METODO QUE MUESTRA LOS ELEMENTOS AGREGADOS A LA LISTA COLA
+    def ElementosCola(self):
+        return self._listaCola
+
+#IDENTIFICA LOS ELEMENTOS PARES DE LA LISTA PILA
+# Y LOS QUE SEAN LOS AGREGA A LA LISTA COLA
+    def EncontrarPares(self):
+        for a in range (0,len(self.__listaPila)):
+            if int(self.__listaPila[a] % 2) == 0:
+                self.InsertarC(self.__listaPila[a])
