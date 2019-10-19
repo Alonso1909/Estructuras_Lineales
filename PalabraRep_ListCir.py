@@ -1,3 +1,5 @@
+#autor: Victor Manuel Cervantes Alonso 18930195
+
 #SE IMPLEMENTA CLASE QUE CREA NODOS
 class Nodo():
     def __init__(self, dato):
@@ -5,7 +7,7 @@ class Nodo():
         self.siguiente = None
 
 #SE IMPLEMENTA CODIGO QUE REALIZA LAS OPRACIONES BASICAS DE UNA LISTA CIRCULAR
-class ListaCircular():
+class PalabraRep():
     palabra = ''
     def __init__(self):
         self.primero = None
@@ -58,3 +60,17 @@ class ListaCircular():
                 aux = aux.siguiente
             aux.siguiente = self.primero
             self.primero = aux
+
+######################################################################################
+#METODO QUE RECORRE LA LISTA Y ENCUENTRA CUANTAS VECES SE REPITE UNA PALABRA EN ESTA
+    def EncontrarRep(self,palabra):
+        self.palabra = palabra
+        cont = 0
+        aux = self.primero
+        while aux:
+            if self.palabra == aux.dato:
+                cont = cont + 1
+            aux = aux.siguiente
+            if aux == self.primero:
+                break
+        return cont

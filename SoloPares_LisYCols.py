@@ -71,6 +71,7 @@ class ObtenerPares:
     def ElementosPila(self):
         return self.__listaPila
 
+######################################################################################
 #METODO QUE MUESTRA LOS ELEMENTOS AGREGADOS A LA LISTA COLA
     def ElementosCola(self):
         return self._listaCola
