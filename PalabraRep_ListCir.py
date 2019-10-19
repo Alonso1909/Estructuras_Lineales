@@ -74,3 +74,12 @@ class PalabraRep():
             if aux == self.primero:
                 break
         return cont
+
+Repetida = PalabraRep()
+palabras = ['a','b','a','c','d','e','a']
+for e in range (0,len(palabras)):
+    Repetida.AgregarInicio(palabras[e])
+PalabraaBuscar = 'a'
+print('La letra ','"',PalabraaBuscar,'"',' se encuetra ',
+      Repetida.EncontrarRep(PalabraaBuscar),' vez/veces repetida'
+                                     ' en la lista circular')

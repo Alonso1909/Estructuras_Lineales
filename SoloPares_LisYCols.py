@@ -83,10 +83,10 @@ class ObtenerPares:
             if int(self.__listaPila[a] % 2) == 0:
                 self.InsertarC(self.__listaPila[a])
 
-DepyPru = ObtenerPares()
+Pares = ObtenerPares()
 elementos = [1,2,3,4,5,6,7,8,9]
 for e in range (0,len(elementos)):
-    DepyPru.InsertarP(elementos[e])
-DepyPru.EncontrarPares()
-print('Los elementos en la pila son: ',DepyPru.ElementosPila())
-print('Los elementos pares de la pila en la cola son: ',DepyPru.ElementosCola())
+    Pares.InsertarP(elementos[e])
+Pares.EncontrarPares()
+print('Los elementos en la pila son: ',Pares.ElementosPila())
+print('Los elementos pares de la pila en la cola son: ',Pares.ElementosCola())
