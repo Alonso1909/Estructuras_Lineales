@@ -31,3 +31,37 @@ class ObtenerPares:
 #INDICA EL TAMAÑO DE LA PILA
     def tamPila(self):
         return len(self.__listaPila)
+
+#SE IMPLEMENTA EL CODIGO QUE REALIZA LAS OPERACIONES BASICAS DE UNA COLA DINAMICA
+    _listaCola = []
+
+#INSERTA UN ELEMENTO EN LA PILA
+    def InsertarC(self, elemento):
+        self._listaCola.append(elemento)
+        return True
+
+#QUITA UN ELEMENTO DE LA PILA (EL PRIMERO EN SER AGREGADO)
+    def QuitarC(self):
+        if self.ColaVacia():
+            return False
+        else:
+            return self._listaCola.pop(0)
+
+#SE VERIFICA SI LA COLA ESTA VACIA
+    def ColaVacia(self):
+        if len(self._listaCola) == 0:
+            return True
+        else:
+            return False
+
+#LIMPIA TODA LA COLA, ELIMINA SUS ELEMENTOS
+    def LimpiarCola(self):
+        self._listaCola.clear()
+
+#IDENTIFICA EL ELEMENTO QUE ESTA EN LA CABEZA
+    def MostrarFrente(self):
+        return self._listaCola[0]
+
+#IDENTIFICA EL TAMAÑO DE LA COLA
+    def MostrarTamCola(self):
+        return len(self._listaCola)
