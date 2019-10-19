@@ -1,3 +1,5 @@
+#autor: Victor Manuel Cervantes Alonso 18930195
+
 class ObtenerPares:
 
 #SE IMPLEMENTA EL CODIGO QUE REALIZA LAS OPERACIONES BASICAS DE UNA PILA DINAMICA
